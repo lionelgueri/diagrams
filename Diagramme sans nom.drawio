@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.8">
+  <diagram name="Architecture Fabric ML Pipeline" id="-yYq32lZzH2hBgdRwA1B">
+    <mxGraphModel dx="1556" dy="1984" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-1" value="Liste SharePoint" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#29AA92;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-2" value="Dataflow Gen2" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#008a00;fontSize=14;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-3" value="Lakehouse R_Entries" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontSize=14;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-4" value="Notebook PySpark (KMeans)" style="shape=document;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-5" value="Lakehouse R_Clusters" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontSize=14;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-6" value="Power BI Report" style="shape=hexagon;whiteSpace=wrap;html=1;fillColor=light-dark(#E9B51C,#1E8D78);fontSize=14;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1081" y="-40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-7" value="Pipeline Fabric" style="shape=process;whiteSpace=wrap;html=1;fillColor=#008a00;fontSize=14;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="640" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-8" value="Power Automate Trigger" style="shape=terminator;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=14;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-9" style="endArrow=block;html=1;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-1" target="HYZufnhc4Z_U9gIpT24J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-10" style="endArrow=block;html=1;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-2" target="HYZufnhc4Z_U9gIpT24J-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-11" style="endArrow=block;html=1;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-3" target="HYZufnhc4Z_U9gIpT24J-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-12" style="endArrow=block;html=1;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-4" target="HYZufnhc4Z_U9gIpT24J-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-14" style="endArrow=block;html=1;dashed=1;dashPattern=8 8;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-8" target="HYZufnhc4Z_U9gIpT24J-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-15" style="endArrow=block;html=1;dashed=1;dashPattern=8 8;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-7" target="HYZufnhc4Z_U9gIpT24J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-16" style="endArrow=block;html=1;entryX=-0.03;entryY=0.46;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;fillColor=#d80073;strokeColor=#A50040;" edge="1" parent="1" target="HYZufnhc4Z_U9gIpT24J-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="150" as="sourcePoint" />
+            <mxPoint x="250" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-18" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="HYZufnhc4Z_U9gIpT24J-2" target="HYZufnhc4Z_U9gIpT24J-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="60" as="sourcePoint" />
+            <mxPoint x="380" y="10" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="60" />
+              <mxPoint x="710" y="-50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HYZufnhc4Z_U9gIpT24J-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="HYZufnhc4Z_U9gIpT24J-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1040" y="110" as="sourcePoint" />
+            <mxPoint x="1090" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1090" y="110" />
+              <mxPoint x="1150" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
